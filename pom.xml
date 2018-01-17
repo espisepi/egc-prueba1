@@ -34,7 +34,7 @@
 			 <archive>
 				<manifest>
 					<!-- Jar file entry point -->
-					<mainClass>${project.groupId}.App</mainClass>
+					<mainClass>${project.groupId}.MisMatematicas</mainClass>
 				</manifest>
 			  </archive>
 			</configuration>
