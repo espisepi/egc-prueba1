@@ -5,7 +5,7 @@ import org.apache.log4j.*;
  * DIVISION
  *
  */
-public class App1 
+public class MisMatematicas
 {
 	static Logger log=Logger.getLogger(App1.class); 
 
