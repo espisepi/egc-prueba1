@@ -23,25 +23,22 @@
   </dependencies>
 
   <build>
-   	<plugins>
-      		<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.10</version>
-        <executions>
-          <execution>
-            <id>copy-dependencies</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/dependencies</outputDirectory>
-              <includeScope> runtime </includeScope> 
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  <build>
+	<plugins>
+  		<!-- Make this jar executable -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+<!--Pluging configuration -->
+			 <archive>
+				<manifest>
+					<!-- Jar file entry point -->
+					<mainClass>${project.groupId}.App</mainClass>
+				</manifest>
+			  </archive>
+			</configuration>
+		</plugin>
+	</plugins>
+  </build>
 </project>
